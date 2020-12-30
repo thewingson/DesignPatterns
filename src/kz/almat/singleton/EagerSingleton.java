@@ -3,7 +3,7 @@ package kz.almat.singleton;
 /**
  *
  * */
-public class EagerSingleton {
+public final class EagerSingleton {
 
     private static final EagerSingleton INSTANCE = new EagerSingleton();
 
