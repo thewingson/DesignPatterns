@@ -1,6 +1,6 @@
 package kz.almat.builder;
 
-public class Starter {
+public class Main {
 
     public static void main(String[] args) {
         Pizza pizza = new Pizza.PizzaBuilder().size(15).cheese("bolonese").onion("red").topping("salami").build();
