@@ -1,22 +1,26 @@
 package kz.almat.singleton;
 
-public class LazySingleton {
+public final class LazySingleton {
 
     public static volatile LazySingleton INSTANCE;
 
-    private LazySingleton(){
+    public String value;
 
+    private LazySingleton(String value){
+        this.value = value;
     }
 
-    public static LazySingleton getInstance(){
-        if(INSTANCE == null){
-            synchronized (LazySingleton.class){
-                if(INSTANCE == null){
-                    INSTANCE = new LazySingleton();
-                }
-            }
+    public static LazySingleton getInstance(String value){
+        LazySingleton result = INSTANCE;
+        if (result != null) {
+            return result;
         }
-        return INSTANCE;
+        synchronized(LazySingleton.class) {
+            if (INSTANCE == null) {
+                INSTANCE = new LazySingleton(value);
+            }
+            return INSTANCE;
+        }
     }
 
 }
