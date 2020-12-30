@@ -5,6 +5,7 @@ public class ChineseHouseBuilder implements HouseBuilder {
     private String walls;
     private String doors;
     private String windows;
+    private HouseType type = HouseType.CHINESE;
 
     @Override
     public HouseBuilder setWalls(String walls) {
@@ -26,6 +27,6 @@ public class ChineseHouseBuilder implements HouseBuilder {
 
     @Override
     public House build() {
-        return new House(this.walls, this.doors, this.windows);
+        return new House(this.walls, this.doors, this.windows, this.type);
     }
 }
