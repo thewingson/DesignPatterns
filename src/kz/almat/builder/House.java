@@ -1,4 +1,4 @@
-package kz.almat.Builder;
+package kz.almat.builder;
 
 public class House {
 
