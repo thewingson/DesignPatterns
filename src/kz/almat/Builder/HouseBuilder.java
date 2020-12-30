@@ -1,10 +1,29 @@
 package kz.almat.Builder;
 
-public interface HouseBuilder {
+public abstract class HouseBuilder {
 
-    HouseBuilder setWalls(String walls);
-    HouseBuilder setDoors(String doors);
-    HouseBuilder setWindows(String windows);
-    House build();
+    protected String walls;
+    protected String doors;
+    protected String windows;
+    protected HouseType houseType;
+
+    public HouseBuilder setWalls(String walls) {
+        this.walls = walls;
+        return this;
+    }
+
+    public HouseBuilder setDoors(String doors) {
+        this.doors = doors;
+        return this;
+    }
+
+    public HouseBuilder setWindows(String windows) {
+        this.windows = windows;
+        return this;
+    }
+
+    public House build() {
+        return new House(this.walls, this.doors, this.windows, this.houseType);
+    }
 
 }
