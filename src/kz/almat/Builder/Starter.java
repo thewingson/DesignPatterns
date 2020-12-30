@@ -8,6 +8,8 @@ public class Starter {
 
         House house = new ChineseHouseBuilder().setWalls("walls").setDoors("doors").setWindows("windows").build();
         System.out.println(house);
+        House house2 = new KazakhHouseBuilder().setWalls("walls").setDoors("doors").setWindows("windows").build();
+        System.out.println(house2);
     }
 
 }
