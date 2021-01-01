@@ -3,10 +3,15 @@ package kz.almat.structural.adapter;
 public class Main {
 
     public static void main(String[] args) {
-//        Message64bit message64bit = DataProvider.getMessage();
-        MessageAdapter adapter = new MessageAdapter(DataProvider.getMessage());
+        // class adapter
+        Message64bit message64bit = DataProvider.getMessage();
+        MessageClassAdapter classAdapter = new MessageClassAdapter(message64bit.getMessage());
 
-        DataAnalyzer.analyze(adapter);
+        DataAnalyzer.analyze(classAdapter);
+
+        // object adapter
+        MessageObjectAdapter objectAdapter = new MessageObjectAdapter(DataProvider.getMessage());
+        DataAnalyzer.analyze(objectAdapter);
 
     }
 
