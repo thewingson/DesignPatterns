@@ -1,4 +1,4 @@
-package kz.almat.structural;
+package kz.almat.structural.adapter;
 
 public class MessageAdapter extends Message64bit implements Message32bit {
     public MessageAdapter(String message) {

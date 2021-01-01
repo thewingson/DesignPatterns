@@ -1,4 +1,4 @@
-package kz.almat.structural;
+package kz.almat.structural.adapter;
 
 public class Message64bit {
     private String message;
