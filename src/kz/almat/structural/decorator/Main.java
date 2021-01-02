@@ -12,6 +12,13 @@ public class Main {
 
         decorator2 = new EncryptionDecorator(decorator2);
         decorator2.writeData(record);
+
+
+        DataSourceDecorator decorator3 = new DataSourceDecorator(new FileDataSource("out/file.txt"));
+        decorator3 = new EncryptionDecorator(decorator3);
+        decorator3 = new CompressionDecorator(decorator3);
+        decorator3.writeData("new new new data");
+
     }
 
 }
