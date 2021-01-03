@@ -1,4 +1,4 @@
-package kz.almat.behavioral;
+package kz.almat.behavioral.strategy;
 
 public class OnlinePayment implements PaymentStrategy {
 
