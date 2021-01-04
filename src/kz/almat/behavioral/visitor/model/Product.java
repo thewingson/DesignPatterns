@@ -6,9 +6,9 @@ public class Product implements Visible{
 
     private String name;
     private String barcode;
-    private short count;
+    private int count;
 
-    public Product(String name, String barcode, short count) {
+    public Product(String name, String barcode, int count) {
         this.name = name;
         this.barcode = barcode;
         this.count = count;
@@ -30,11 +30,11 @@ public class Product implements Visible{
         this.barcode = barcode;
     }
 
-    public short getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(short count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
