@@ -1,6 +1,8 @@
 package kz.almat.behavioral.visitor.model;
 
-public class Employee {
+import kz.almat.behavioral.visitor.ReportVisitor;
+
+public class Employee implements Visible{
 
     private String fullName;
     private String position;
@@ -34,5 +36,10 @@ public class Employee {
 
     public void setSalary(float salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String accept(ReportVisitor visitor) {
+        return visitor.visitEmployeeReport(this);
     }
 }
