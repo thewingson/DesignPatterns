@@ -24,6 +24,12 @@ public class Main {
             System.out.println(item.accept(reportVisitor));
         }
 
+        System.out.println();
+        reportVisitor = new XmlReportVisitor();
+        for (Visible item : items) {
+            System.out.println(item.accept(reportVisitor));
+        }
+
     }
 
 }
