@@ -1,6 +1,8 @@
 package kz.almat.behavioral.visitor.model;
 
-public class Product {
+import kz.almat.behavioral.visitor.ReportVisitor;
+
+public class Product implements Visible{
 
     private String name;
     private String barcode;
@@ -34,5 +36,10 @@ public class Product {
 
     public void setCount(short count) {
         this.count = count;
+    }
+
+    @Override
+    public String accept(ReportVisitor visitor) {
+        return visitor.visitProductReport(this);
     }
 }
