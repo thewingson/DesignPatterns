@@ -1,6 +1,8 @@
 package kz.almat.behavioral.visitor.model;
 
-public class Order {
+import kz.almat.behavioral.visitor.ReportVisitor;
+
+public class Order implements Visible{
 
     private String date;
     private String address;
@@ -34,5 +36,10 @@ public class Order {
 
     public void setSumm(float summ) {
         this.summ = summ;
+    }
+
+    @Override
+    public String accept(ReportVisitor visitor) {
+        return visitor.visitOrderReport(this);
     }
 }
